@@ -16,7 +16,6 @@ clickToPlay.addEventListener('click', () => {
 });
 
 //create event listener to listen to clicks and + 1 each click
-
 var counter = 0;
 function recordClick() {
     counter++;
@@ -25,6 +24,7 @@ function recordClick() {
 
 clickBtn.addEventListener('click', recordClick);
 
+//create function to count down time and handle end round logic
 var seconds = 6;
 var interval;
 
@@ -47,7 +47,7 @@ function timerFunction() {
             clickBtn.addEventListener('click', recordClick);
             endGameBox.classList.remove('end-game-box-start');
             endGameBox.classList.add('end-game-box');
-            leaderBoard.dispatchEvent(roundOver)
+            leaderBoard.dispatchEvent(gameOver)
         }
     }, 1000)
 }
@@ -59,7 +59,7 @@ let timerFun = clickToPlay.addEventListener('click', () => {
 });
 
 //when timer reaches 0, display name and score in leader-board
-var roundOver = new Event('roundOver', {
+var gameOver = new CustomEvent('roundOver', {
     bubbles: true,
     cancelable: true
 });
