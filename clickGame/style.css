@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow: auto;
+    background-image: url("imgs/spaceship.jpg");
+}
+nav {
+    background-color: azure;
+    opacity: 0.4;
+    padding: 2px;
+}
+
+nav h3 {
+    width: 150px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav form {
+    width: 100px;
+    background-color: orchid;
+    display: inline-block;
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+nav input {
+    font-size: 5rem;
+    cursor: pointer;
+    margin-left: 22px;
+}
+
+.title {
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    color: azure;
+    font-size: 1.6rem;
+}
+
+.name-input-box {
+    width: 220px;
+    margin: 10px auto;
+    text-align: center;
+
+}
+
+input {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+#click-to-play {
+    width: 350px;
+    height: 40px;
+    margin: 20px auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+.start-btn {
+    background-color: yellowgreen;
+    color: azure;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 12px 30px 10px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.start-btn:hover:after {
+    width: 100%;
+    height: 0;
+    right: 0;
+    border-color: #fff;
+    border-width: 1px;
+}
+
+.start-btn:after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-width: 3px;
+    border-style: solid;
+    right: -10px;
+    top: -10px;
+    border-bottom: none;
+    border-left: none;
+    transition: .5s;
+}
+
+.start-btn:hover:before {
+    width: 100%;
+    height: 0;
+    left: 0;
+    border-color: #fff;
+    border-width: 1px;
+
+}
+
+.start-btn:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-width: 3px;
+    border-style: solid;
+    left: -10px;
+    bottom: -10px;
+    border-top: none;
+    border-right: none;
+    transition: .5s;
+}
+
+.game-box {
+    width: 700px;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+.game-box-item {
+    display: inline-block;
+    color: azure;
+    border-radius: 3px;
+}
+
+.timer {
+    float: left;
+}
+
+.score {
+    float: right;
+}
+
+.timer,
+.score {
+    height: 100px;
+    text-align: center;
+    background-color: purple;
+    margin: 2px;
+    opacity: 0.8;
+}
+
+.page-load-gif {
+    visibility: hidden;
+}
+
+.end-game-box-start {
+    visibility: hidden;
+}
+
+.end-game-box {
+    width: 100px;
+    height: 100px;
+    animation: myanim 8s infinite;
+    position: absolute;
+    overflow: hidden;
+}
+
+@keyframes myanim {
+    50% {}
+}
+
+#clicker-container {
+    width: 700px;
+    height: 140px;
+    overflow: auto;
+    margin: 10px auto;
+}
+
+.record-click {
+    background-image: url("imgs/pngguru.com.png");
+    background-size: cover;
+    background-position: center;
+    width: 140px;
+    height: 100px;
+    text-align: center;
+    animation: myanim 3s infinite;
+    cursor: pointer;
+}
+
+@keyframes myanim {
+    60% {
+        margin-left: 560px;
+    }
+}
+
+.timer,
+.score {
+    width: 19%;
+}
+
+.preClick {
+    visibility: hidden;
+    width: 140px;
+    height: 0px;
+}
+
+.leader-board {
+    width: 500px;
+    height: 500px;
+    background-color: orchid;
+    opacity: 0.8;
+    margin: 0 auto;
+    text-align: center;
+    color: azure;
+}
+
