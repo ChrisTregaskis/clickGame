@@ -6,6 +6,9 @@ body {
     overflow: auto;
     background-image: url("imgs/spaceship.jpg");
 }
+
+/* - - - -- NAV -- - - - */
+
 nav {
     background-color: azure;
     opacity: 0.4;
@@ -33,6 +36,8 @@ nav input {
     margin-left: 22px;
 }
 
+/* - - - -- BODY -- - - - */
+
 .title {
     width: 700px;
     margin: 0 auto;
@@ -56,6 +61,7 @@ input {
     font-size: 1.2rem;
 }
 
+/* - - - -- START GAME BTN -- - - - */
 
 #click-to-play {
     width: 350px;
@@ -121,6 +127,8 @@ input {
     transition: .5s;
 }
 
+/* - - - -- DISPLAY GAME BOX -- - - - */
+
 .game-box {
     width: 700px;
     overflow: auto;
@@ -170,6 +178,8 @@ input {
     50% {}
 }
 
+/* - - - -- ACTIVE GAME BOX -- - - - */
+
 #clicker-container {
     width: 700px;
     height: 140px;
@@ -202,8 +212,10 @@ input {
 .preClick {
     visibility: hidden;
     width: 140px;
-    height: 0px;
+    height: 0;
 }
+
+/* - - - -- LEADER BOARD -- - - - */
 
 .leader-board {
     width: 500px;
