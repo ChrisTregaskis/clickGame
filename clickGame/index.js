@@ -19,7 +19,7 @@ clickToPlay.addEventListener('click', () => {
 var counter = 0;
 function recordClick() {
     counter++;
-    scoreTotal.innerHTML = `<p>SCORE</p><p>${counter}</p>`;
+    scoreTotal.textContent = counter;
 }
 
 clickBtn.addEventListener('click', recordClick);
@@ -42,7 +42,7 @@ function timerFunction() {
             clickBtn.classList.add('preClick');
             clickBtn.classList.remove('record-click');
             seconds = 6;
-            scoreTotal.innerHTML = `<p>SCORE</p><p>finished!</p>`;
+            // scoreTotal.textContent = 'finished!';
             counter = 0;
             clickBtn.addEventListener('click', recordClick);
             endGameBox.classList.remove('end-game-box-start');
@@ -66,7 +66,7 @@ var gameOver = new CustomEvent('roundOver', {
 
 leaderBoard.addEventListener('roundOver', () => {
     var name = document.getElementById('name').value;
-    var score = counter
+    var score = scoreTotal.textContent;
     var recordScore = document.createElement('p');
     recordScore.textContent = name + ': ' + score;
     leaderBoard.appendChild(recordScore);
