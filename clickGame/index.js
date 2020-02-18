@@ -35,7 +35,7 @@ if(seconds === 0) {
 function timerFunction() {
     interval = setInterval(() => {
         seconds --;
-        timer.innerHTML = `<p>TIMER</p><p>${seconds}</p>`;
+        timer.textContent = seconds;
         if(!seconds){
             clearInterval(interval);
             clickBtn.removeEventListener('click', recordClick);
