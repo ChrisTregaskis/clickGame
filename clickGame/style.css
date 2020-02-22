@@ -47,6 +47,20 @@ fieldset {
     width: 350px;
 }
 
+#login-submit {
+    background-color: coral;
+    color: white;
+    border: 1px solid coral;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#login-submit:hover {
+    background-color: #cd5b45;
+    border-color: #cd5b45;
+    transition: background-color 1s;
+}
+
 .user-email-input .user-input-hint,
 .user-password-input .user-input-hint {
     visibility: hidden;
@@ -61,7 +75,7 @@ fieldset {
     bottom: 100%;
     left: 50%;
     margin-left: -21%;
-    margin-bottom: -275px;
+    margin-bottom: -282px;
     opacity: 0;
     transition: opacity 1s;
 }
@@ -69,7 +83,7 @@ fieldset {
 .user-email-input:hover .user-input-hint,
 .user-password-input:hover .user-input-hint {
     visibility: visible;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 /* - - - -- NAV -- - - - */
