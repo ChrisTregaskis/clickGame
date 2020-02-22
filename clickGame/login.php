@@ -7,7 +7,6 @@ session_start();
 $userEmailTest = 'test@test.com';
 $userPasswordTest = 'password';
 
-//CALL FUNCTIONS
 if(isset($_POST['user-email-input'])){
 
     $userEmailInput = checkInput($_POST['user-email-input']);
@@ -16,8 +15,6 @@ if(isset($_POST['user-email-input'])){
     $validatedInput = validateCredentials($userEmailTest, $userPasswordTest, $userEmailInput, $userPasswordInput);
     $attemptLogin = loginSession($validatedInput);
 }
-
-
 
 ?>
 

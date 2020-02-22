@@ -1,6 +1,6 @@
 <?php
 
-//Checking if user has entered credentials
+//Check if user has entered credentials
 function checkInput ($input) {
     if (isset($input)) {
         return $input;
@@ -20,14 +20,8 @@ function validateCredentials($userEmailDB, $userPasswordDB, $userEmailInput, $us
 
 //if credentials are correct create assoc session array with login key & value
 function loginSession($credentialsToAction) {
-    $error = '';
     if ($credentialsToAction === true) {
         $_SESSION['login'] = 1;
-        header ('Location: index.html');
-    } else {
-        $error .= '<script type="text/javascript">';
-        $error .= ' alert("Incorrect credentials, please try again. Hover input for working credentials.")';
-        $error .= '</script>';
-        return $error;
+        header('Location: index.php');
     }
 }
