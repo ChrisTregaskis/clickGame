@@ -11,18 +11,20 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="index.js"></script>
 </head>
-<body>
+<body class="body-login">
     <div class="login-box">
+        <h2>Please Log In</h2>
         <form class="login" method="post">
-            <input type="text" id="login-user" placeholder="User email" required/>
-            <input type="password" id="login-password" placeholder="Password" required/>
+            <fieldset class="user-email-input">
+                <input type="text" id="login-user" placeholder="User email" required/>
+                <span class="user-input-hint">user email = test@test.com &#128521;</span>
+            </fieldset>
+            <fieldset class="user-password-input">
+                <input type="password" id="login-password" placeholder="Password" required/>
+                <span class="user-input-hint">password = password &#128521;</span>
+            </fieldset>
             <input type="submit" id="login-submit" value="LOGIN"/>
         </form>
-        <div id="input-hint">hint?</div>
-        <div id="login-hint-detail">
-            <p>User email = test@test.com</p>
-            <p>Password = password</p>
-        </div>
     </div>
 </body>
 </html>
