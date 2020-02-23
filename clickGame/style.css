@@ -4,7 +4,20 @@
 
 .body-game {
     overflow: auto;
-    background-image: url("imgs/spaceship.jpg");
+    background-color: #cd5b45;
+}
+
+nav,
+.login-box,
+#leader-board,
+.timer,
+.score {
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 /* - - - -- LOGIN PAGE -- - - - */
@@ -23,12 +36,6 @@
     transform: translate(-50%, -50%);
     border-radius: 5px;
     text-align: center;
-    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-    0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 fieldset {
@@ -90,8 +97,9 @@ fieldset {
 
 nav {
     background-color: azure;
-    opacity: 0.4;
+    /*opacity: 0.4;*/
     padding: 2px;
+    border-radius: 5px;
 }
 
 nav h3 {
@@ -102,7 +110,7 @@ nav h3 {
 
 nav form {
     width: 100px;
-    background-color: orchid;
+    background-color: #cd5b45;
     display: inline-block;
     float: right;
     margin-top: 20px;
@@ -158,6 +166,7 @@ input {
     padding: 12px 30px 10px;
     position: relative;
     text-transform: uppercase;
+    border-radius: 2px;
 }
 
 .start-btn:hover:after {
@@ -166,6 +175,7 @@ input {
     right: 0;
     border-color: #fff;
     border-width: 1px;
+    border-radius: 2px;
 }
 
 .start-btn:after {
@@ -180,6 +190,7 @@ input {
     border-bottom: none;
     border-left: none;
     transition: .5s;
+    border-radius: 2px;
 }
 
 .start-btn:hover:before {
@@ -188,7 +199,7 @@ input {
     left: 0;
     border-color: #fff;
     border-width: 1px;
-
+    border-radius: 2px;
 }
 
 .start-btn:before {
@@ -204,19 +215,19 @@ input {
     border-top: none;
     border-right: none;
     transition: .5s;
+    border-radius: 2px;
 }
 
 /* - - - -- DISPLAY GAME BOX -- - - - */
 
 .game-box {
     width: 700px;
-    overflow: auto;
+    overflow: visible;
     margin: 0 auto;
 }
 
 .game-box-item {
     display: inline-block;
-    color: azure;
     border-radius: 3px;
 }
 
@@ -236,7 +247,7 @@ input {
 .score {
     height: 100px;
     text-align: center;
-    background-color: purple;
+    background-color: cornsilk;
     margin: 2px;
     opacity: 0.8;
 }
@@ -303,7 +314,7 @@ input {
 #leader-board {
     width: 500px;
     height: 500px;
-    background-color: orchid;
+    background-color: coral;
     opacity: 0.8;
     margin: 0 auto;
     text-align: center;
@@ -312,6 +323,5 @@ input {
 
 #leader-board p {
     font-size: 2rem;
-    text-transform: uppercase;
 }
 
