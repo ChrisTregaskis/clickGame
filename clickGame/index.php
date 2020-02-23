@@ -6,6 +6,10 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
     header("Location: login.php");
 }
 
+if (isset($_POST['logout'])) {
+    $_SESSION['Login'] = '';
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +23,7 @@ if (!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
 <body class="body-game">
 <nav>
     <h3>You are logged in!</h3>
-    <form action="login.php" method="get">
+    <form action="login.php" method="post">
         <input type="submit" name="logout" value="Logout">
     </form>
 </nav>
