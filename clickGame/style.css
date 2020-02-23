@@ -2,9 +2,88 @@
     box-sizing: border-box;
 }
 
-body {
+.body-game {
     overflow: auto;
     background-image: url("imgs/spaceship.jpg");
+}
+
+/* - - - -- LOGIN PAGE -- - - - */
+
+.body-login {
+    background-color: coral;
+}
+
+.login-box {
+    width: 500px;
+    height: 300px;
+    background-color: cornsilk;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+fieldset {
+    border: none;
+}
+
+.login-box input {
+    display: block;
+    margin: 10px auto;
+}
+
+#login-user,
+#login-password {
+    border: none;
+    border-radius: 20px;
+    width: 350px;
+}
+
+#login-submit {
+    background-color: coral;
+    color: white;
+    border: 1px solid coral;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#login-submit:hover {
+    background-color: #cd5b45;
+    border-color: #cd5b45;
+    transition: background-color 1s;
+}
+
+.user-email-input .user-input-hint,
+.user-password-input .user-input-hint {
+    visibility: hidden;
+    width: 210px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -21%;
+    margin-bottom: -282px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.user-email-input:hover .user-input-hint,
+.user-password-input:hover .user-input-hint {
+    visibility: visible;
+    opacity: 0.6;
 }
 
 /* - - - -- NAV -- - - - */
@@ -44,7 +123,7 @@ nav input {
     text-align: center;
 }
 
-h2 {
+.title h2 {
     color: azure;
     font-size: 1.6rem;
 }

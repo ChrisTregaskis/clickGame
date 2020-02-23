@@ -8,11 +8,15 @@ let leaderBoard = document.getElementById('leader-board');
 
 //if clicked, display press me button
 clickToPlay.addEventListener('click', () => {
-    clickBtn.classList.add('record-click');
-    clickBtn.classList.remove('preClick');
-    endGameBox.classList.remove('end-game-box');
-    endGameBox.classList.add('end-game-box-start');
-    endGameBox.classList.remove('page-load-gif');
+    if(document.getElementById('name').value.length !== 0) {
+        clickBtn.classList.add('record-click');
+        clickBtn.classList.remove('preClick');
+        endGameBox.classList.remove('end-game-box');
+        endGameBox.classList.add('end-game-box-start');
+        endGameBox.classList.remove('page-load-gif');
+    } else {
+        alert('Please enter your player name!')
+    }
 });
 
 //create event listener to listen to clicks and + 1 each click
@@ -53,9 +57,12 @@ function timerFunction() {
 }
 
 //when record-click pressed, start timer & display live score
+
 let timerFun = clickToPlay.addEventListener('click', () => {
-    timerFunction();
-    document.getElementById('click-to-play').removeEventListener('click', timerFun)
+    if(document.getElementById('name').value.length !== 0) {
+        timerFunction();
+        document.getElementById('click-to-play').removeEventListener('click', timerFun)
+    }
 });
 
 //when timer reaches 0, display name and score in leader-board
