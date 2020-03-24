@@ -264,14 +264,13 @@ input {
 .end-game-box {
     width: 100px;
     height: 100px;
-    animation: myanim 8s infinite;
     position: absolute;
     overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-@keyframes myanim {
-    50% {}
-}
 
 /* - - - -- ACTIVE GAME BOX -- - - - */
 
